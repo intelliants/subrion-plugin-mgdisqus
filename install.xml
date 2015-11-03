@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin name="mgdisqus">
+	<title>mgDisqus</title>
+	<summary>This mod allows you to integrate Disqus.com comments on your website powered by Subrion CMS.</summary>
+	<author>ModsGuru</author>
+	<contributor>ModsGuru</contributor>
+	<version>3.0.1</version>
+	<date>2014-10-27</date>
+	<compatibility>3.0</compatibility>
+
+	<config group="miscellaneous" name="mgdiscuss_plugin" type="divider" value="mgDisqus"><![CDATA[ mgDisqus ]]></config>
+	<config group="miscellaneous" name="mgdisqus_shortname" type="text" description="Disqus Short Name">input your disqus short name</config>
+
+	<blocks>
+		<block title="Comments" name="mgdisqus_block" showheader="0" position="bottom" type="smarty">
+			<![CDATA[
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+	var disqus_shortname = '{$core.config.mgdisqus_shortname}';
+	var disqus_identifier = '{md5($smarty.const.IA_SELF)}';
+	var disqus_url = '{$smarty.const.IA_SELF}';
+	var disqus_developer = 0;
+
+	(function()
+	{
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	} )();
+</script>
+			]]>
+		</block>
+	</blocks>
+</plugin>
