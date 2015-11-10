@@ -4,9 +4,9 @@
 	<summary>This mod allows you to integrate Disqus.com comments on your website powered by Subrion CMS.</summary>
 	<author>ModsGuru</author>
 	<contributor>ModsGuru</contributor>
-	<version>3.0.1</version>
-	<date>2014-10-27</date>
-	<compatibility>3.0</compatibility>
+	<version>4.0.0</version>
+	<date>2015-11-10</date>
+	<compatibility>4.0</compatibility>
 
 	<config group="miscellaneous" name="mgdiscuss_plugin" type="divider" value="mgDisqus"><![CDATA[ mgDisqus ]]></config>
 	<config group="miscellaneous" name="mgdisqus_shortname" type="text" description="Disqus Short Name">input your disqus short name</config>
